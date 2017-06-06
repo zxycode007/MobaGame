@@ -243,3 +243,19 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Assets/Scenes
+/Assets/RTS Effects
+/Assets/Resources
+/Assets/Resource/Data
+/Assets/prefabs
+/Assets/Plugins/Behavior Designer/Runtime
+/Assets/Models
+/Assets/JMO Assets
+/Assets/Gizmos
+/Assets/EnergyEffects
+/Assets/Behavior Designer
+/Temp
+/ProjectSettings
+/Library
+/Assets/Standard Assets
+/Assets/New Terrain.asset
