@@ -45,6 +45,7 @@ namespace MobaGame
 			{
 				if(colliders[i].gameObject.tag == "Player")
 				{
+                    Debug.LogWarning("发现Player"+colliders[i].gameObject.GetComponent<Actor>().creatureName);
 					target.Value = colliders [i].transform;
 					if(WithInSight(target.Value, fieldOfViewAngle))
 					{

@@ -153,6 +153,7 @@
     <Compile Include="Assets\Scripts\Skills\SkillAsset.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillInspector.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillItem.cs" />
+    <Compile Include="Assets\Scripts\SpawnMonster.cs" />
     <Compile Include="Assets\Scripts\Time\Timer.cs" />
     <Compile Include="Assets\Scripts\Time\TimerManager.cs" />
     <Compile Include="Assets\Scripts\UI\ConsoleInput.cs" />

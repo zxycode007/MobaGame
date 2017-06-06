@@ -18,10 +18,10 @@ namespace MobaGame
 		public static readonly Hashtable SkillData;
 		public static readonly Hashtable globalDataTable;
 		public static readonly Hashtable BuffData;
-		static GameObject playerObj;
-		static TimerManager timerManager;
-		static GameObject consoleWnd;
-		static GameLoop gameManager;
+		static GameObject m_playerObj;
+		static TimerManager m_timerManager;
+		static GameObject m_consoleWnd;
+		static GameLoop m_gameManager;
 		static GameObject m_spawnPointA;
 		static GameObject m_spawnPointB;
 		static ActorManager actorManager;
@@ -107,26 +107,26 @@ namespace MobaGame
 		//获取玩家单位
 		public static GameObject GetPlayer()
 		{
-			if(playerObj == null)
+			if(m_playerObj == null)
 			{
-				playerObj = GameObject.Find ("player");
+				m_playerObj = GameObject.Find ("player");
 			}
-			return playerObj;
+			return m_playerObj;
 		}
 
 		public static GameObject GetConsole()
 		{
-			if(consoleWnd == null)
+			if(m_consoleWnd == null)
 			{
-				consoleWnd = GameObject.Find ("ConsolePanel");
+				m_consoleWnd = GameObject.Find ("ConsolePanel");
 			}
-			return consoleWnd;
+			return m_consoleWnd;
 		}
 
 		public static void Println(string msg)
 		{
 			GetConsole ();
-			if(consoleWnd != null)
+			if(m_consoleWnd != null)
 			{
 				GameObject console = GameObject.Find ("ConsolePanel/ConsoleOutput");
 				Text output = console.GetComponent<Text>();
@@ -138,28 +138,28 @@ namespace MobaGame
 
 		public static TimerManager GetTimerManager()
 		{
-			if(timerManager==null)
+			if(m_timerManager==null)
 			{
 				GameObject obj = GameObject.Find ("GameManager");
 				if(obj != null)
 				{
-					timerManager = obj.GetComponent<TimerManager> ();
+					m_timerManager = obj.GetComponent<TimerManager> ();
 				}
 			}
-			return timerManager;
+			return m_timerManager;
 		}
 
 		public static GameLoop GetGameManager()
 		{
-			if(gameManager==null)
+			if(m_gameManager==null)
 			{
 				GameObject obj = GameObject.Find ("GameManager");
 				if(obj != null)
 				{
-					gameManager = obj.GetComponent<GameLoop> ();
+					m_gameManager = obj.GetComponent<GameLoop> ();
 				}
 			}
-			return gameManager;
+			return m_gameManager;
 		}
 
 		public static GameObject GetPrefab(string name)

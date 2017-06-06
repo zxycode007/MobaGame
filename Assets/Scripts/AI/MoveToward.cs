@@ -35,6 +35,7 @@ namespace MobaGame
 			CommandManager mgr = actor.GetCommandManager ();
 			mgr.Clear ();
 			mgr.AddCommand (new AttackCommand(target.Value.GetComponent<Actor>(), actor));
+            Debug.Log("AI 攻击命令!");
 			//actor.AttackTargetOrder (target.Value);
 			return TaskStatus.Running;
 		}

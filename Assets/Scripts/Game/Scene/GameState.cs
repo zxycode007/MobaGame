@@ -65,7 +65,6 @@ namespace MobaGame
 
 		void OnMouseFire2(object sender, EventArgs arg)
 		{
-			Debug.Log ("鼠标点击2");
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if(Physics.Raycast(ray, out hit, 200))
